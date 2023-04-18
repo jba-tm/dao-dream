@@ -1,0 +1,17 @@
+.header {
+  &__wrapper {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  &__button {
+    background: linear-gradient(180deg, #f95acc 0%, rgba(113, 61, 255, 0) 100%),
+      rgba(255, 255, 255, 0.02);
+    border: #666666 1px solid;
+    box-shadow: 0 0 16px -4px #713dff;
+    border-radius: 80px;
+    padding: 8px 25px;
+  }
+}

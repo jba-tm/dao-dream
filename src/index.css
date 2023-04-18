@@ -1,8 +1,0 @@
-/* src/index.css */
-
-/* Import normalize.css */
-@import url(../src/assets/normalize/normalize.css); /* Your CSS rules here */
-@import url(../src//assets//fonts/stylesheet.css);
-body {
-  font-family: "Inter";
-}

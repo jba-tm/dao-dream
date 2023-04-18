@@ -1,10 +1,12 @@
-// import styles from "./App.module.scss";
-import Home from "./pages/Home/Home";
+import Index from "./pages/Home";
+import Header from "./components/Header";
 
 function App() {
   return (
     <div className="App">
-      <Home />
+      <Header />
+
+      <Index />
     </div>
   );
 }
