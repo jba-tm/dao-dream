@@ -1,0 +1,103 @@
+@import "../../assets/mixins/mixins";
+@import "../../assets/scssVariables/variables";
+.header,
+.left,
+.right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.left {
+  color: $primary-font-white;
+  @include flexRowCenter;
+
+  &__logo {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+.list {
+  @include flexRowCenter;
+  list-style-type: none;
+  color: $primary-font-white;
+  font-size: 16px;
+  line-height: 24px;
+  li {
+    margin-right: 24px;
+  }
+}
+
+.sublist {
+  @include flexColumnCenter;
+  list-style-type: none;
+  padding: 0;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url(../../assets/icons/down.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+    right: 10px;
+  }
+}
+
+.right {
+  @include flexRowCenter;
+  gap: 30px;
+}
+.languages {
+  @include flexRowCenter;
+  gap: 6px;
+  color: $primary-font-white;
+  font-size: 16px;
+
+  &__text {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url(../../assets/icons/down.svg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 10px;
+      height: 10px;
+      right: -15px;
+    }
+  }
+}
+
+.button {
+  div {
+    @include resetButton;
+    font-size: 16px;
+
+    // background: rgb(113, 61, 255);
+    background: linear-gradient(
+      0deg,
+      rgba(113, 61, 255, 1) 40%,
+      rgba(249, 90, 204, 1) 100%
+    );
+
+    padding: 10px 30px;
+    border-radius: 50px;
+    border: solid 1.5px rgba($color: #8f82b9, $alpha: 1);
+    // border-bottom: none;
+    // border-bottom: 1px rgba($color: rgb(248, 13, 13), $alpha: 1);
+    color: $primary-font-white;
+
+    box-shadow: 6px 6px 18px 13px rgba(113, 61, 255, 0.36);
+    -webkit-box-shadow: 6px 6px 18px 13px rgba(113, 61, 255, 0.36);
+    -moz-box-shadow: 6px 6px 18px 13px rgba(113, 61, 255, 0.36);
+    box-sizing: content-box;
+  }
+}
