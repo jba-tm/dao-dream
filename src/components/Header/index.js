@@ -26,7 +26,7 @@ function Header() {
 
   return (
     <header className="header__wrapper">
-      <div className="xl:container mx-auto py-4">
+      <div className="container mx-auto py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-12">
             <a href="/" className="hover:opacity-50 ease-linear duration-150">

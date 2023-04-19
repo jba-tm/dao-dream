@@ -5,6 +5,12 @@
     top: 0;
     width: 100%;
     backdrop-filter: blur(20px);
+    padding: 14px 0;
+    z-index: 1;
+
+    .container {
+      max-width: 1280px;
+    }
   }
 
   &__button {
