@@ -274,6 +274,11 @@
       &__rows {
         width: 85%;
 
+        &__wrapper {
+          background-image: none;
+          height: auto;
+        }
+
         &:nth-child(1) {
           .home__roadmap__col {
             &::after {
