@@ -376,13 +376,13 @@ function Index() {
                           </div>
                         </div>
 
-                        <div className="flex flex-wrap gap-8">
+                        <div className="flex md:flex-nowrap flex-wrap gap-8">
                           <div className="flex flex-col gap-1">
                             <p className="text-secondary-text">
                               Royalty wallet, 1%
                             </p>
 
-                            <h4 className="text-3xl ">$1,404</h4>
+                            <h4 className="text-2xl">$1,404</h4>
                           </div>
 
                           <div className="flex flex-col gap-1">
@@ -390,7 +390,7 @@ function Index() {
                               Donations wallet
                             </p>
 
-                            <h4 className="text-3xl ">$20,140,581</h4>
+                            <h4 className="text-2xl">$20,140,581</h4>
                           </div>
                         </div>
                       </div>
