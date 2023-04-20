@@ -249,11 +249,25 @@
       text-align: center;
       min-height: 80px;
       position: relative;
+      background-color: var(--dark-blue);
     }
 
     &__row {
       display: grid;
-      gap: 1rem;
+      gap: 1.5rem;
+    }
+
+    &__rows {
+      padding: 0 2rem;
+
+      &__wrapper {
+        background-image: url("../../icons/connectors/mobile.png");
+        background-repeat: no-repeat;
+        background-size: 100% 530px;
+        background-position: 0 35px;
+        gap: 1.5rem;
+        height: 640px;
+      }
     }
 
     @media (min-width: 1024px) {

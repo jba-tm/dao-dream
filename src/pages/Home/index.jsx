@@ -442,7 +442,7 @@ function Index() {
               </p>
             </div>
 
-            <div className="flex flex-col lg:gap-8 gap-4 mt-24">
+            <div className="home__roadmap__rows__wrapper flex flex-col lg:gap-8 mt-24">
               <div className="home__roadmap__rows">
                 <div className="home__roadmap__row">
                   <div className="home__roadmap__col">
