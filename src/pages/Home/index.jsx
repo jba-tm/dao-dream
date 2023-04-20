@@ -217,7 +217,7 @@ function Index() {
                 </div>
 
                 <div className="flex flex-col gap-8">
-                  <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
+                  <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8">
                     {stats.map((stat, index) => (
                       <div
                         className="home__stats__card flex flex-col gap-4 p-8"
@@ -245,7 +245,7 @@ function Index() {
                           </div>
                         </div>
 
-                        <div className="flex items-end gap-4 mb-4">
+                        <div className="flex items-end flex-wrap gap-4 mb-4">
                           <h1 className="text-5xl font-medium">$2.14B</h1>
 
                           <p className="text-secondary-text">April 7, 2023</p>
@@ -269,7 +269,7 @@ function Index() {
                           </div>
                         </div>
 
-                        <div className="flex items-end gap-4 mb-4">
+                        <div className="flex items-end flex-wrap gap-4 mb-4">
                           <h1 className="text-5xl font-medium">$315.49B</h1>
 
                           <p className="text-secondary-text">April 7, 2023</p>
@@ -364,7 +364,7 @@ function Index() {
                           </div>
                         </div>
 
-                        <div className="flex gap-8">
+                        <div className="flex flex-wrap gap-8">
                           <div className="flex flex-col gap-1">
                             <p className="text-secondary-text">
                               Royalty wallet, 1%
@@ -386,8 +386,8 @@ function Index() {
                       <div className="flex flex-col gap-8">
                         {donators.map((donator, index) => (
                           <div className="home__stats__card p-4" key={index}>
-                            <div className="flex items-center justify-between gap-4">
-                              <div className="flex gap-4">
+                            <div className="flex items-center justify-between flex-wrap gap-4">
+                              <div className="flex items-center gap-4">
                                 <img src={Donator} alt="" />
 
                                 <div className="flex flex-col">
