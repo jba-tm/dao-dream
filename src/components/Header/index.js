@@ -33,7 +33,7 @@ function Header() {
               <img src={Logo} alt="" />
             </a>
 
-            <nav>
+            <nav className="lg:block hidden">
               <ul className="flex items-center gap-6">
                 {nav.map((item, index) => (
                   <li key={index}>
@@ -49,26 +49,30 @@ function Header() {
             </nav>
           </div>
 
-          <div className="flex items-center gap-8">
-            <div className="flex items-center gap-2 text-white border border-zinc-300 rounded-lg py-1 p-2">
-              <AiFillCalendar />
+          <div>
+            <div className="hidden lg:flex items-center gap-8">
+              <div className="flex items-center gap-2 text-white border border-zinc-300 rounded-lg py-1 p-2">
+                <AiFillCalendar />
 
-              <span>3.735</span>
+                <span>3.735</span>
 
-              <AiOutlineRise className="text-green-500" />
+                <AiOutlineRise className="text-green-500" />
+              </div>
+
+              <div className="flex items-center gap-2 cursor-pointer hover:opacity-50 ease-linear duration-150">
+                <TbLanguage className="text-xl" />
+
+                <span>English</span>
+
+                <AiFillCaretDown />
+              </div>
+
+              <button className="header__button hover:opacity-50 ease-linear duration-150">
+                Enter App
+              </button>
             </div>
 
-            <div className="flex items-center gap-2 cursor-pointer hover:opacity-50 ease-linear duration-150">
-              <TbLanguage className="text-xl" />
-
-              <span>English</span>
-
-              <AiFillCaretDown />
-            </div>
-
-            <button className="header__button hover:opacity-50 ease-linear duration-150">
-              Enter App
-            </button>
+            <h1 className="lg:hidden block">Hamgurg</h1>
           </div>
         </div>
       </div>

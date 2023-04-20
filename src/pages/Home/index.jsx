@@ -69,8 +69,8 @@ function Index() {
     <div className="home__wrapper">
       <section className="home__landing-section pt-24">
         <div className="container mx-auto">
-          <div className="mt-12 flex flex-col gap-10 text-center text-5xl font-medium">
-            <div className="flex flex-col items-center gap-10 w-8/12 mx-auto ">
+          <div className="mt-12 flex flex-col gap-10 text-center lg:text-5xl text-3xl font-medium">
+            <div className="flex flex-col items-center gap-10 md:w-8/12 w-full mx-auto ">
               <h2>
                 The Best Auto-Staking & Auto-Compounding Protocol in Crypto
               </h2>
@@ -79,7 +79,7 @@ function Index() {
 
             <img src={Bird} alt="" className="mx-auto home__image" />
 
-            <p className="text-xl font-normal w-5/12 mx-auto mt-4">
+            <p className="text-xl font-normal md:w-5/12 w-full mx-auto mt-4">
               Essentially purchase and hold the HighPoint Token acquire
               hazardous, yet manageable, easy revenue
             </p>
@@ -89,7 +89,7 @@ function Index() {
 
       <div className="py-10">
         <div className="container mx-auto">
-          <div className="grid grid-cols-2 gap-8 mt-20">
+          <div className="grid lg:grid-cols-2 md:grid-cols-1 lg:gap-8 md:gap-4 mt-20">
             {cards.map((card, index) => (
               <div className="home__card mb-8" key={index}>
                 <img
@@ -186,10 +186,12 @@ function Index() {
               <img src={Ton} alt="" />
             </div>
 
-            <div className="py-14 h-full justify-between flex flex-col items-start gap-2">
-              <h2 className="text-5xl">Get Rewards</h2>
+            <div className="py-14 h-full justify-between flex flex-col lg:items-start items-center gap-2 lg:text-left">
+              <h2 className="lg:text-5xl text-3xl">Get Rewards</h2>
 
-              <p className="text-3xl">Every 30 Minutes / 48 Times Daily!</p>
+              <p className="lg:text-3xl text-xl">
+                Every 30 Minutes / 48 Times Daily!
+              </p>
 
               <p className="text-secondary-text">
                 Here at HighPoint, we want to build a long-term investment
@@ -201,230 +203,232 @@ function Index() {
           </section>
         </div>
 
-        <section className="home__stats__wrapper">
-          <div className="container">
-            <div className="home__stats py-20">
-              <div className="flex flex-col gap-3 text-center w-6/12 mx-auto mb-10">
-                <h1 className="uppercase text-5xl">STATISTICS</h1>
+        <div className="px-4">
+          <section className="home__stats__wrapper">
+            <div className="container">
+              <div className="home__stats py-20">
+                <div className="flex flex-col gap-3 text-center w-6/12 mx-auto mb-10">
+                  <h1 className="uppercase text-5xl">STATISTICS</h1>
 
-                <p className="text-secondary-text ">
-                  Ton Statistics offers insights into the Ton ecosystem's
-                  performance, usage, and growth across various sectors.
-                </p>
-              </div>
-
-              <div className="flex flex-col gap-8">
-                <div className="grid grid-cols-4 gap-8">
-                  {stats.map((stat, index) => (
-                    <div
-                      className="home__stats__card flex flex-col gap-4 p-8"
-                      key={index}
-                    >
-                      <p className="text-secondary-text">{stat.title}</p>
-
-                      <h1 className="text-3xl">{stat.value}</h1>
-                    </div>
-                  ))}
+                  <p className="text-secondary-text ">
+                    Ton Statistics offers insights into the Ton ecosystem's
+                    performance, usage, and growth across various sectors.
+                  </p>
                 </div>
 
-                <div className="grid grid-cols-2 gap-8">
-                  <div className="home__stats__card flex flex-col gap-4">
-                    <div className="p-8">
-                      <div className="flex items-center justify-between mb-4">
-                        <p className="font-medium">
-                          Received from staking/farming profits
-                        </p>
+                <div className="flex flex-col gap-8">
+                  <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
+                    {stats.map((stat, index) => (
+                      <div
+                        className="home__stats__card flex flex-col gap-4 p-8"
+                        key={index}
+                      >
+                        <p className="text-secondary-text">{stat.title}</p>
 
-                        <div className="flex items-center gap-1">
-                          <p>Last 28 days</p>
-
-                          <AiFillCaretDown />
-                        </div>
+                        <h1 className="text-3xl">{stat.value}</h1>
                       </div>
-
-                      <div className="flex items-end gap-4 mb-4">
-                        <h1 className="text-5xl font-medium">$2.14B</h1>
-
-                        <p className="text-secondary-text">April 7, 2023</p>
-                      </div>
-                    </div>
-
-                    <img src="/charts/2.png" alt="" />
+                    ))}
                   </div>
 
-                  <div className="home__stats__card flex flex-col gap-4">
-                    <div className="p-8">
-                      <div className="flex items-center justify-between mb-4">
-                        <p className="font-medium">
-                          Transferred to rewards for Holders
-                        </p>
-
-                        <div className="flex items-center gap-1">
-                          <p>Last 28 days</p>
-
-                          <AiFillCaretDown />
-                        </div>
-                      </div>
-
-                      <div className="flex items-end gap-4 mb-4">
-                        <h1 className="text-5xl font-medium">$315.49B</h1>
-
-                        <p className="text-secondary-text">April 7, 2023</p>
-                      </div>
-                    </div>
-
-                    <img src="/charts/3.png" alt="" />
-                  </div>
-                </div>
-
-                <div className="home__stats__card p-8">
-                  <div className="home__stats__table__wrapper">
-                    <div className="flex flex-col gap-12">
-                      <div className="flex flex-col ">
-                        <p className="text-secondary-text text-lg">
-                          Jettons sold
-                        </p>
-
-                        <h3 className="text-4xl">10 000 000</h3>
-                      </div>
-
-                      <div className="flex flex-col gap-4">
-                        <p className="text-secondary-text text-lg">
-                          Steakin' jettons
-                        </p>
-
-                        <h3 className="text-4xl">100 000</h3>
-                      </div>
-
-                      <div className="flex items-center gap-4">
-                        <button className="py-2 px-4 rounded-3xl bg-white text-black  hover:opacity-50 ease-linear duration-150 font-medium">
-                          Enter App
-                        </button>
-
-                        <button className="hover:opacity-50 ease-linear duration-150">
-                          Read newspaper
-                        </button>
-                      </div>
-                    </div>
-
-                    <table className="text-center table-auto rounded-xl">
-                      <thead>
-                        <tr>
-                          <td>Round</td>
-                          <td>NFT sold</td>
-                          <td>Price, Ton</td>
-                        </tr>
-                      </thead>
-
-                      <tbody>
-                        {Array.from([1, 2, 3, 4, 5, 6]).map((_, index) => (
-                          <tr key={index}>
-                            <td>1</td>
-                            <td>100</td>
-                            <td>1</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-
-                <div className="flex flex-col mt-10">
-                  <div className="flex flex-col gap-6 text-center mb-16">
-                    <h1 className="uppercase text-4xl">DONATE</h1>
-
-                    <p className="text-2xl">
-                      You can transfer any amount of Ton to the Aid Pool without
-                      limitations.
-                    </p>
-
-                    <p className="text-secondary-text">
-                      The Aid Pool allocates funds to various Assistance Funds
-                      globally.
-                    </p>
-                  </div>
-                  <div className="home__stats__donate__grid">
-                    <div className="flex flex-col gap-8">
-                      <h3 className="text-xl mb-8">Statistics</h3>
-
-                      <div className="flex flex-col gap-8">
-                        <div className="flex flex-col gap-1">
-                          <p className="text-secondary-text">Wallet 1</p>
-
-                          <h4 className="text-5xl ">$8,302,569</h4>
-                        </div>
-
-                        <div className="flex flex-col gap-1">
-                          <p className="text-secondary-text">Wallet 2</p>
-
-                          <h4 className="text-5xl ">$12,861,492</h4>
-                        </div>
-                      </div>
-
-                      <div className="flex gap-8">
-                        <div className="flex flex-col gap-1">
-                          <p className="text-secondary-text">
-                            Royalty wallet, 1%
+                  <div className="grid lg:grid-cols-2 md:grid-cols-1 gap-8">
+                    <div className="home__stats__card flex flex-col gap-4">
+                      <div className="p-8">
+                        <div className="flex items-center justify-between mb-4">
+                          <p className="font-medium">
+                            Received from staking/farming profits
                           </p>
 
-                          <h4 className="text-3xl ">$1,404</h4>
-                        </div>
+                          <div className="flex items-center gap-1">
+                            <p>Last 28 days</p>
 
-                        <div className="flex flex-col gap-1">
-                          <p className="text-secondary-text">
-                            Donations wallet
-                          </p>
-
-                          <h4 className="text-3xl ">$20,140,581</h4>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="flex flex-col gap-8">
-                      {donators.map((donator, index) => (
-                        <div className="home__stats__card p-4" key={index}>
-                          <div className="flex items-center justify-between gap-4">
-                            <div className="flex gap-4">
-                              <img src={Donator} alt="" />
-
-                              <div className="flex flex-col">
-                                <h5>{donator.name}</h5>
-
-                                <p className="text-secondary-text">
-                                  {donator.place}
-                                </p>
-                              </div>
-                            </div>
-
-                            <p>{donator.amount}</p>
+                            <AiFillCaretDown />
                           </div>
                         </div>
-                      ))}
-                    </div>
 
-                    <div className="flex flex-col gap-8">
-                      <div className="home__stats__card flex flex-col p-8 px-14 items-center gap-4">
-                        <img src={QRCode} alt="" className="h-30" />
+                        <div className="flex items-end gap-4 mb-4">
+                          <h1 className="text-5xl font-medium">$2.14B</h1>
 
-                        <div className="flex items-center gap-2 cursor-pointer hover:opacity-50 ease-linear duration-150">
-                          <FiCopy />
-
-                          <p>Copy address</p>
+                          <p className="text-secondary-text">April 7, 2023</p>
                         </div>
                       </div>
 
-                      <div className="home__stats__card p-4">
-                        <p className="hover:opacity-50 ease-linear duration-150">
-                          info@dao-dream.com
-                        </p>
+                      <img src="/charts/2.png" alt="" className="w-24" />
+                    </div>
+
+                    <div className="home__stats__card flex flex-col gap-4">
+                      <div className="p-8">
+                        <div className="flex items-center justify-between mb-4">
+                          <p className="font-medium">
+                            Transferred to rewards for Holders
+                          </p>
+
+                          <div className="flex items-center gap-1">
+                            <p>Last 28 days</p>
+
+                            <AiFillCaretDown />
+                          </div>
+                        </div>
+
+                        <div className="flex items-end gap-4 mb-4">
+                          <h1 className="text-5xl font-medium">$315.49B</h1>
+
+                          <p className="text-secondary-text">April 7, 2023</p>
+                        </div>
+                      </div>
+
+                      <img src="/charts/3.png" alt="" className="w-24" />
+                    </div>
+                  </div>
+
+                  <div className="home__stats__card p-8">
+                    <div className="home__stats__table__wrapper">
+                      <div className="flex flex-col gap-12">
+                        <div className="flex flex-col ">
+                          <p className="text-secondary-text text-lg">
+                            Jettons sold
+                          </p>
+
+                          <h3 className="text-4xl">10 000 000</h3>
+                        </div>
+
+                        <div className="flex flex-col gap-4">
+                          <p className="text-secondary-text text-lg">
+                            Steakin' jettons
+                          </p>
+
+                          <h3 className="text-4xl">100 000</h3>
+                        </div>
+
+                        <div className="flex items-center gap-4">
+                          <button className="py-2 px-4 rounded-3xl bg-white text-black  hover:opacity-50 ease-linear duration-150 font-medium">
+                            Enter App
+                          </button>
+
+                          <button className="hover:opacity-50 ease-linear duration-150">
+                            Read newspaper
+                          </button>
+                        </div>
+                      </div>
+
+                      <table className="text-center table-auto rounded-xl">
+                        <thead>
+                          <tr>
+                            <td>Round</td>
+                            <td>NFT sold</td>
+                            <td>Price, Ton</td>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          {Array.from([1, 2, 3, 4, 5, 6]).map((_, index) => (
+                            <tr key={index}>
+                              <td>1</td>
+                              <td>100</td>
+                              <td>1</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col mt-10">
+                    <div className="flex flex-col gap-6 text-center mb-16">
+                      <h1 className="uppercase text-4xl">DONATE</h1>
+
+                      <p className="text-2xl">
+                        You can transfer any amount of Ton to the Aid Pool
+                        without limitations.
+                      </p>
+
+                      <p className="text-secondary-text">
+                        The Aid Pool allocates funds to various Assistance Funds
+                        globally.
+                      </p>
+                    </div>
+                    <div className="home__stats__donate__grid">
+                      <div className="flex flex-col gap-8">
+                        <h3 className="text-xl mb-8">Statistics</h3>
+
+                        <div className="flex flex-col gap-8">
+                          <div className="flex flex-col gap-1">
+                            <p className="text-secondary-text">Wallet 1</p>
+
+                            <h4 className="text-5xl ">$8,302,569</h4>
+                          </div>
+
+                          <div className="flex flex-col gap-1">
+                            <p className="text-secondary-text">Wallet 2</p>
+
+                            <h4 className="text-5xl ">$12,861,492</h4>
+                          </div>
+                        </div>
+
+                        <div className="flex gap-8">
+                          <div className="flex flex-col gap-1">
+                            <p className="text-secondary-text">
+                              Royalty wallet, 1%
+                            </p>
+
+                            <h4 className="text-3xl ">$1,404</h4>
+                          </div>
+
+                          <div className="flex flex-col gap-1">
+                            <p className="text-secondary-text">
+                              Donations wallet
+                            </p>
+
+                            <h4 className="text-3xl ">$20,140,581</h4>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="flex flex-col gap-8">
+                        {donators.map((donator, index) => (
+                          <div className="home__stats__card p-4" key={index}>
+                            <div className="flex items-center justify-between gap-4">
+                              <div className="flex gap-4">
+                                <img src={Donator} alt="" />
+
+                                <div className="flex flex-col">
+                                  <h5>{donator.name}</h5>
+
+                                  <p className="text-secondary-text">
+                                    {donator.place}
+                                  </p>
+                                </div>
+                              </div>
+
+                              <p>{donator.amount}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+
+                      <div className="flex flex-col gap-8">
+                        <div className="home__stats__card flex flex-col p-8 px-14 items-center gap-4">
+                          <img src={QRCode} alt="" className="h-30" />
+
+                          <div className="flex items-center gap-2 cursor-pointer hover:opacity-50 ease-linear duration-150">
+                            <FiCopy />
+
+                            <p>Copy address</p>
+                          </div>
+                        </div>
+
+                        <div className="home__stats__card p-4">
+                          <p className="hover:opacity-50 ease-linear duration-150">
+                            info@dao-dream.com
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
 
         <section className="home__roadmap">
           <div className="container">
@@ -506,10 +510,10 @@ function Index() {
           <div className="container">
             <p>dao-dream.com</p>
 
-            <div className="flex items-center justify-between gap-2 mt-10">
+            <div className="home__socials mt-10">
               {Array.from([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]).map((_, index) => (
                 <div
-                  className="home__social flex gap-2 items-center"
+                  className="home__social inline-flex gap-2 items-center"
                   key={index}
                 >
                   <AiOutlineSend />
