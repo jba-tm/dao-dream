@@ -181,6 +181,8 @@
     }
 
     &__table {
+      border: 2px solid var(--table-border-color);
+
       &__wrapper {
         display: grid;
         gap: 2rem;
@@ -202,13 +204,13 @@
                 rgba(113, 61, 255, 0.5) 0%,
                 rgba(0, 0, 0, 0) 100%
               );
-              border: 2px solid var(--border-color);
+              border: 1px solid var(--table-border-color);
             }
           }
 
           tbody {
             td {
-              border: 2px solid var(--border-color);
+              border: 1px solid var(--table-border-color);
             }
           }
         }

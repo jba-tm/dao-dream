@@ -18,7 +18,7 @@
   &__button {
     background: linear-gradient(180deg, #f95acc 0%, rgba(113, 61, 255, 0) 100%),
       rgba(255, 255, 255, 0.02);
-    border: #666666 1px solid;
+    border: var(--table-border-color) 1px solid;
     border-radius: 80px;
     padding: 8px 25px;
   }

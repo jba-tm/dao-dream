@@ -11,6 +11,7 @@ module.exports = {
         border: "#666",
         pink: "#F95ACC",
         "darkest-blue": "#030118",
+        "table-border": "#61606E",
       },
     },
   },

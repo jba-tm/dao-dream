@@ -299,7 +299,7 @@ function Index() {
                           <h3 className="text-4xl">100 000</h3>
                         </div>
 
-                        <div className="flex items-center gap-4">
+                        <div className="hidden lg:flex flex items-center gap-4">
                           <button className="py-2 px-4 rounded-3xl bg-white text-black  hover:opacity-50 ease-linear duration-150 font-medium">
                             Enter App
                           </button>
@@ -310,25 +310,37 @@ function Index() {
                         </div>
                       </div>
 
-                      <table className="text-center table-auto rounded-xl">
-                        <thead>
-                          <tr>
-                            <td>Round</td>
-                            <td>NFT sold</td>
-                            <td>Price, Ton</td>
-                          </tr>
-                        </thead>
+                      <div className="flex lg:hidden flex-wrap justify-center items-center gap-4">
+                        <button className="py-2 px-4 rounded-3xl bg-white text-black  hover:opacity-50 ease-linear duration-150 font-medium">
+                          Enter App
+                        </button>
 
-                        <tbody>
-                          {Array.from([1, 2, 3, 4, 5, 6]).map((_, index) => (
-                            <tr key={index}>
-                              <td>1</td>
-                              <td>100</td>
-                              <td>1</td>
+                        <button className="hover:opacity-50 ease-linear duration-150">
+                          Read newspaper
+                        </button>
+                      </div>
+
+                      <div className="rounded-xl overflow-hidden border-white home__stats__table">
+                        <table className="text-center table-auto w-full h-full">
+                          <thead>
+                            <tr>
+                              <td>Round</td>
+                              <td>NFT sold</td>
+                              <td>Price, Ton</td>
                             </tr>
-                          ))}
-                        </tbody>
-                      </table>
+                          </thead>
+
+                          <tbody>
+                            {Array.from([1, 2, 3, 4, 5, 6]).map((_, index) => (
+                              <tr key={index}>
+                                <td>1</td>
+                                <td>100</td>
+                                <td>1</td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
                   </div>
 
