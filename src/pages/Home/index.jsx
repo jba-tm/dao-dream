@@ -216,7 +216,10 @@ function Index() {
               <div className="flex flex-col gap-8">
                 <div className="grid grid-cols-4 gap-8">
                   {stats.map((stat, index) => (
-                    <div className="home__stats__card flex flex-col gap-4 p-8">
+                    <div
+                      className="home__stats__card flex flex-col gap-4 p-8"
+                      key={index}
+                    >
                       <p className="text-secondary-text">{stat.title}</p>
 
                       <h1 className="text-3xl">{stat.value}</h1>
@@ -315,7 +318,7 @@ function Index() {
 
                       <tbody>
                         {Array.from([1, 2, 3, 4, 5, 6]).map((_, index) => (
-                          <tr>
+                          <tr key={index}>
                             <td>1</td>
                             <td>100</td>
                             <td>1</td>
@@ -379,7 +382,7 @@ function Index() {
 
                     <div className="flex flex-col gap-8">
                       {donators.map((donator, index) => (
-                        <div className="home__stats__card p-4">
+                        <div className="home__stats__card p-4" key={index}>
                           <div className="flex items-center justify-between gap-4">
                             <div className="flex gap-4">
                               <img src={Donator} alt="" />
@@ -465,7 +468,10 @@ function Index() {
 
             <div className="grid grid-cols-5 gap-4 mt-24">
               {Array.from([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]).map((_, index) => (
-                <div className="flex justify-center items-center text-center">
+                <div
+                  className="flex justify-center items-center text-center"
+                  key={index}
+                >
                   <img src={`/logos/logo-${index}.png`} alt="" />
                 </div>
               ))}
@@ -485,7 +491,10 @@ function Index() {
 
             <div className="grid grid-cols-5 gap-4 mt-24">
               {Array.from([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]).map((_, index) => (
-                <div className="flex justify-center items-center text-center">
+                <div
+                  className="flex justify-center items-center text-center"
+                  key={index}
+                >
                   <img src={`/logos/logo-${index}.png`} alt="" />
                 </div>
               ))}
@@ -499,7 +508,10 @@ function Index() {
 
             <div className="flex items-center justify-between gap-2 mt-10">
               {Array.from([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]).map((_, index) => (
-                <div className="home__social flex gap-2 items-center">
+                <div
+                  className="home__social flex gap-2 items-center"
+                  key={index}
+                >
                   <AiOutlineSend />
                   <span>Channel</span>
                 </div>
