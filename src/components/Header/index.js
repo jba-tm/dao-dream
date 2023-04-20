@@ -3,6 +3,7 @@ import Logo from "../../assets/images/logo.svg";
 
 import { AiFillCalendar, AiOutlineRise, AiFillCaretDown } from "react-icons/ai";
 import { TbLanguage } from "react-icons/tb";
+import { CgMenu } from "react-icons/cg";
 
 function Header() {
   const [nav] = useState([
@@ -72,7 +73,9 @@ function Header() {
               </button>
             </div>
 
-            <h1 className="lg:hidden block">Hamgurg</h1>
+            <h1 className="lg:hidden block text-white text-xl">
+              <CgMenu />
+            </h1>
           </div>
         </div>
       </div>

@@ -85,9 +85,6 @@
         ),
         rgba(255, 255, 255, 0.02);
       border: 1px solid rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(12px);
-
-      /* Note: backdrop-filter has minimal browser support */
       border-radius: 24px;
 
       &__card {
@@ -124,7 +121,6 @@
       rgba(255, 255, 255, 0.9) 100%
     );
     border: 1px solid var(--border-color);
-    backdrop-filter: blur(12px);
     border-radius: 24px;
 
     height: auto;
@@ -173,7 +169,6 @@
           rgba(113, 61, 255, 0.9) 32.82%,
           rgba(0, 0, 0, 0) 69.64%
         );
-      backdrop-filter: blur(12px);
       border-radius: 24px;
       max-width: 1220px;
       margin: 100px auto;
@@ -182,16 +177,21 @@
     &__card {
       background: rgba(255, 255, 255, 0.02);
       border: 1px solid rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(12px);
-
-      /* Note: backdrop-filter has minimal browser support */
       border-radius: 24px;
     }
 
     &__table {
       &__wrapper {
         display: grid;
-        grid-template-columns: 3fr 5fr;
+        gap: 2rem;
+
+        @media (min-width: 768px) {
+          grid-template-columns: 1fr;
+        }
+
+        @media (min-width: 1024px) {
+          grid-template-columns: 3fr 5fr;
+        }
 
         table {
           thead {
@@ -216,31 +216,46 @@
     }
 
     &__donate {
-      @media (min-width: 1024px) {
-        &__grid {
-          display: grid;
-          grid-template-columns: 8fr 10fr 8fr;
-          gap: 2rem;
-        }
-      }
+      &__grid {
+        display: grid;
+        gap: 2rem;
 
-      @media (min-width: 768px) {
-        &__grid {
-          grid-template-columns: 1fr 1fr;
+        @media (min-width: 768px) {
+          grid-template-columns: 1fr;
+        }
+
+        @media (min-width: 1024px) {
+          grid-template-columns: 8fr 10fr 8fr;
         }
       }
     }
   }
 
   &__card {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(12px);
-
+    background: #ffffff05;
+    border: 1px solid var(--border-color);
     border-radius: 24px;
   }
 
   &__roadmap {
+    &__col {
+      border: 1px solid var(--border-color);
+      padding: 16px;
+      border-radius: 24px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 80px;
+      position: relative;
+    }
+
+    &__row {
+      display: grid;
+      gap: 1rem;
+    }
+
     @media (min-width: 1024px) {
       &__rows {
         width: 85%;
@@ -276,17 +291,6 @@
       }
 
       &__col {
-        border: 1px solid var(--border-color);
-        padding: 16px;
-        border-radius: 24px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        min-height: 80px;
-        position: relative;
-
         &::after {
           content: "";
           display: block;
@@ -334,5 +338,10 @@
     border: 1px solid var(--border-color);
     padding: 12px;
     border-radius: 14px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10px 1fr;
+    align-items: center;
+    gap: 10px;
   }
 }

@@ -207,7 +207,7 @@ function Index() {
           <section className="home__stats__wrapper">
             <div className="container">
               <div className="home__stats py-20">
-                <div className="flex flex-col gap-3 text-center w-6/12 mx-auto mb-10">
+                <div className="flex flex-col gap-3 text-center lg:w-6/12 mx-auto mb-10">
                   <h1 className="uppercase text-5xl">STATISTICS</h1>
 
                   <p className="text-secondary-text ">
@@ -233,7 +233,7 @@ function Index() {
                   <div className="grid lg:grid-cols-2 md:grid-cols-1 gap-8">
                     <div className="home__stats__card flex flex-col gap-4">
                       <div className="p-8">
-                        <div className="flex items-center justify-between mb-4">
+                        <div className="flex items-center justify-between flex-wrap gap-2 mb-4">
                           <p className="font-medium">
                             Received from staking/farming profits
                           </p>
@@ -252,12 +252,12 @@ function Index() {
                         </div>
                       </div>
 
-                      <img src="/charts/2.png" alt="" className="w-24" />
+                      <img src="/charts/2.png" alt="" className="w-full" />
                     </div>
 
                     <div className="home__stats__card flex flex-col gap-4">
                       <div className="p-8">
-                        <div className="flex items-center justify-between mb-4">
+                        <div className="flex items-center justify-between flex-wrap gap-2 mb-4">
                           <p className="font-medium">
                             Transferred to rewards for Holders
                           </p>
@@ -276,7 +276,7 @@ function Index() {
                         </div>
                       </div>
 
-                      <img src="/charts/3.png" alt="" className="w-24" />
+                      <img src="/charts/3.png" alt="" className="w-full" />
                     </div>
                   </div>
 
@@ -442,7 +442,7 @@ function Index() {
               </p>
             </div>
 
-            <div className="flex flex-col gap-8 mt-24">
+            <div className="flex flex-col lg:gap-8 gap-4 mt-24">
               <div className="home__roadmap__rows">
                 <div className="home__roadmap__row">
                   <div className="home__roadmap__col">
@@ -457,7 +457,7 @@ function Index() {
                 </div>
               </div>
 
-              <div className="home__roadmap__rows ml-auto">
+              <div className="home__roadmap__rows lg:ml-auto">
                 <div className="home__roadmap__row">
                   <div className="home__roadmap__col">Website</div>
 
@@ -470,7 +470,7 @@ function Index() {
               </div>
             </div>
 
-            <div className="grid grid-cols-5 gap-4 mt-24">
+            <div className="grid lg:grid-cols-5 grid-cols-2 gap-4 mt-24">
               {Array.from([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]).map((_, index) => (
                 <div
                   className="flex justify-center items-center text-center"
@@ -487,35 +487,37 @@ function Index() {
           </div>
         </section>
 
-        <section className="home__partners__wrapper">
-          <div className="home__partners p-16">
-            <h1 className="text-5xl uppercase text-center">
-              OUR PARTNERS & STAKEHOLDERS
-            </h1>
+        <div className="px-4">
+          <section className="home__partners__wrapper">
+            <div className="home__partners p-16">
+              <h1
+                className="lg:text-5xl text-3xl
+             uppercase text-center"
+              >
+                OUR PARTNERS & STAKEHOLDERS
+              </h1>
 
-            <div className="grid grid-cols-5 gap-4 mt-24">
-              {Array.from([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]).map((_, index) => (
-                <div
-                  className="flex justify-center items-center text-center"
-                  key={index}
-                >
-                  <img src={`/logos/logo-${index}.png`} alt="" />
-                </div>
-              ))}
+              <div className="grid lg:grid-cols-5 grid-cols-2 gap-4 mt-24">
+                {Array.from([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]).map((_, index) => (
+                  <div
+                    className="flex justify-center items-center text-center"
+                    key={index}
+                  >
+                    <img src={`/logos/logo-${index}.png`} alt="" />
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
 
         <section>
           <div className="container">
             <p>dao-dream.com</p>
 
             <div className="home__socials mt-10">
-              {Array.from([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]).map((_, index) => (
-                <div
-                  className="home__social inline-flex gap-2 items-center"
-                  key={index}
-                >
+              {Array.from([0, 1, 2, 3, 4, 5, 6, 7, 8]).map((_, index) => (
+                <div className="home__social" key={index}>
                   <AiOutlineSend />
                   <span>Channel</span>
                 </div>
