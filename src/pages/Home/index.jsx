@@ -7,6 +7,12 @@ import QRCode from "../../assets/images/qrcode.svg";
 import LearnMoreButton from "../../components/LearnMoreButton";
 import { AiFillCaretDown, AiOutlineSend } from "react-icons/ai";
 import { FiCopy } from "react-icons/fi";
+import Chart from "chart.js/auto";
+import { CategoryScale, Filler } from "chart.js";
+import LineChart from "./LineChart";
+
+Chart.register(CategoryScale);
+Chart.register(Filler);
 
 function Index() {
   const [cards] = useState([
@@ -122,8 +128,8 @@ function Index() {
 
                 <LearnMoreButton />
               </div>
-
-              <img src="/charts/1.png" alt="" className="w-full" />
+              <LineChart />
+              {/*<img src="/charts/1.png" alt="" className="w-full" />*/}
             </div>
 
             <div className="home__blocks__item flex flex-col items-start gap-4 p-10">
@@ -251,8 +257,9 @@ function Index() {
                           <p className="text-secondary-text">April 7, 2023</p>
                         </div>
                       </div>
+                      <LineChart />
 
-                      <img src="/charts/2.png" alt="" className="w-full" />
+                      {/*<img src="/charts/2.png" alt="" className="w-full" />*/}
                     </div>
 
                     <div className="home__stats__card flex flex-col gap-4">
@@ -275,8 +282,9 @@ function Index() {
                           <p className="text-secondary-text">April 7, 2023</p>
                         </div>
                       </div>
+                      <LineChart />
 
-                      <img src="/charts/3.png" alt="" className="w-full" />
+                      {/*<img src="/charts/3.png" alt="" className="w-full" />*/}
                     </div>
                   </div>
 
