@@ -10,12 +10,77 @@ import { FiCopy } from "react-icons/fi";
 import Chart from "chart.js/auto";
 import { CategoryScale, Filler } from "chart.js";
 import LineChart from "./LineChart";
+import { Transition, Menu } from "@headlessui/react";
 
 Chart.register(CategoryScale);
 Chart.register(Filler);
 
+const ChartDropdown = () => {
+  const dayChoices = [
+    {
+      value: 28,
+      title: "Last 28 days",
+    },
+    {
+      value: 21,
+      title: "Last 21 days",
+    },
+    {
+      value: 14,
+      title: "Last 14 days",
+    },
+    {
+      value: 7,
+      title: "Last 7 days",
+    },
+  ];
+
+  const [selected, setSelected] = useState(dayChoices[0]);
+  return (
+    <Menu as="div" className="relative inline-block text-left">
+      <div>
+        <Menu.Button className="inline-flex w-full justify-center bg-transparent px-4 py-2 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+          <div className="flex items-center gap-1">
+            <span>{selected.title}</span>
+
+            <AiFillCaretDown />
+          </div>
+        </Menu.Button>
+      </div>
+      <Transition
+        as={React.Fragment}
+        enter="transition ease-out duration-100"
+        enterFrom="transform opacity-0 scale-95"
+        enterTo="transform opacity-100 scale-100"
+        leave="transition ease-in duration-75"
+        leaveFrom="transform opacity-100 scale-100"
+        leaveTo="transform opacity-0 scale-95"
+      >
+        <Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <div className="px-1 py-1 ">
+            {dayChoices.map((day, i) => (
+              <Menu.Item>
+                {({ active }) => (
+                  <button
+                    onClick={(e) => setSelected(day)}
+                    className={`${
+                      active ? "bg-violet-500 text-white" : "text-gray-900"
+                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                  >
+                    {day.title}
+                  </button>
+                )}
+              </Menu.Item>
+            ))}
+          </div>
+        </Menu.Items>
+      </Transition>
+    </Menu>
+  );
+};
+
 function Index() {
-  const [cards] = useState([
+  const cards = [
     {
       title: "Sustainable Growth",
       text: "Invest in a crypto that prioritizes long-term sustainability and growth, rather than quick gains and instability.",
@@ -32,9 +97,9 @@ function Index() {
       title: "Anti-Dump",
       text: "Our anti-dump policy ensures that large sell-offs do not disrupt the market and harm our investors' portfolios.",
     },
-  ]);
+  ];
 
-  const [stats] = useState([
+  const stats = [
     {
       title: "Ton amount",
       value: "549,326,121",
@@ -51,9 +116,9 @@ function Index() {
       title: "Received via NFT",
       value: "410,415,125",
     },
-  ]);
+  ];
 
-  const [donators] = useState([
+  const donators = [
     {
       name: "Hope Horizon",
       place: "Tokyo, Japan",
@@ -69,7 +134,7 @@ function Index() {
       place: "New York, USA",
       amount: "$6,713,604",
     },
-  ]);
+  ];
 
   return (
     <div className="home__wrapper">
@@ -247,12 +312,7 @@ function Index() {
                           <p className="font-medium">
                             Received from staking/farming profits
                           </p>
-
-                          <div className="flex items-center gap-1">
-                            <p>Last 28 days</p>
-
-                            <AiFillCaretDown />
-                          </div>
+                          <ChartDropdown />
                         </div>
 
                         <div className="flex items-end flex-wrap gap-4 mb-4">
@@ -277,11 +337,7 @@ function Index() {
                             Transferred to rewards for Holders
                           </p>
 
-                          <div className="flex items-center gap-1">
-                            <p>Last 28 days</p>
-
-                            <AiFillCaretDown />
-                          </div>
+                          <ChartDropdown />
                         </div>
 
                         <div className="flex items-end flex-wrap gap-4 mb-4">

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { CgMenu, CgClose } from "react-icons/cg";
 import Logo from "../../assets/images/logo.svg";
-import { Dialog, Transition } from "@headlessui/react";
+import { Dialog, Transition, Listbox } from "@headlessui/react";
 
 import {
   AiFillCalendar,
@@ -10,7 +10,6 @@ import {
   AiOutlineCheck,
 } from "react-icons/ai";
 import { TbLanguage } from "react-icons/tb";
-import { Listbox } from "@headlessui/react";
 
 const languages = ["English", "French"];
 
