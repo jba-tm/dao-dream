@@ -128,7 +128,11 @@ function Index() {
 
                 <LearnMoreButton />
               </div>
-              <LineChart />
+              <LineChart
+                borderColor={"#F95ACC"}
+                backgroundColorTop="rgba(249, 90, 204, 1)"
+                backgroundColorBottom="rgba(113, 61, 255, 0)"
+              />
               {/*<img src="/charts/1.png" alt="" className="w-full" />*/}
             </div>
 
@@ -257,7 +261,11 @@ function Index() {
                           <p className="text-secondary-text">April 7, 2023</p>
                         </div>
                       </div>
-                      <LineChart />
+                      <LineChart
+                        borderColor={"#713DFF"}
+                        backgroundColorBottom={"rgba(0, 143, 255, 0)"}
+                        backgroundColorTop={"rgba(0, 143, 255, 1)"}
+                      />
 
                       {/*<img src="/charts/2.png" alt="" className="w-full" />*/}
                     </div>
@@ -282,7 +290,11 @@ function Index() {
                           <p className="text-secondary-text">April 7, 2023</p>
                         </div>
                       </div>
-                      <LineChart />
+                      <LineChart
+                        borderColor={"#713DFF"}
+                        backgroundColorBottom={"rgba(0, 143, 255, 0)"}
+                        backgroundColorTop={"rgba(0, 143, 255, 1)"}
+                      />
 
                       {/*<img src="/charts/3.png" alt="" className="w-full" />*/}
                     </div>
